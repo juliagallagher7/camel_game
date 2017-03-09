@@ -1,0 +1,18 @@
+#the camel game
+
+print ("hi ur gonna die if u dont outrun the peeps")
+
+done = False
+
+distance = 0
+native_distance = -100
+
+
+while not done:
+print ("A. Drink from canteen")
+print ("B. Keep going at moderate speed")
+print ("C. Keep going at full speed")
+print ("D. Stop for the night")
+print ("E. Status check")
+print ("F. Quit")
+
