@@ -1,0 +1,58 @@
+#the camel game
+
+import random
+
+print ("hi ur gonna die if u dont outrun the peeps")
+
+# variables
+
+distance = 0
+native_distance = -100
+thirst = 100
+stamina = 100
+canteen = 5
+full_speed = random.randrange(20,30)
+moderate_speed = random.randrange(10,20)
+native_speed = random.randrange(10,20)
+done = False
+
+print()
+while not done:
+    print("You have five options:")
+    print ("A. Drink from canteen")
+    print ("B. Keep going at moderate speed")
+    print ("C. Keep going at full speed")
+    print ("D. Stop for the night")
+    print ("E. Status check")
+    print ("F. Quit")
+    print()
+
+    user_choice = input("Your Choice is: ")
+    
+    if user_choice == "A" or user_choice == "a":
+        if thirst == 100:
+            print("Your canteen is full")
+        else:
+            thirst = thirst + 25
+        print("Current Thirst: ", thirst)
+    if user_choice == "B" or user_choice == "b":
+        distance = distance + moderate_speed
+        print("You have traveled: ", distance, "miles",)
+    if user_choice == "C" or user_choice == "c":
+        print("Current Distance:", distance)
+        distance = distance + full_speed
+        print("New Distance: ", distance, "miles",)
+    if user_choice == "D" or user_choice == "d":
+        print("You stopped for the night to rest.")
+    if user_choice == "E" or user_choice == "e":
+        print("Current distance: ", distance, "miles",)
+        print("Current thirst level: ", thirst)
+        print("Drinks in canteen: ", canteen)
+        native_distance = native_distance + native_speed
+        print("The natives are ", native_distance, " miles behind you!",)
+    if user_choice == "F" or user_choice == "f":
+        done = True
+            
+
+
+        
